@@ -44,3 +44,14 @@ To update an existing GitHub Pages site, replace all original files with the con
 The exact original LingoLeaf logo created for this project is now used across the app: the original wordmark next to its matching icon in the fixed app header and onboarding, plus the full-size designed logo on the About screen. Matching icon exports are included for installed apps. Changes are limited to branding, retaining all 60 lessons, profile data and localStorage key.
 
 If an older icon remains visible on iPhone/Android, close the web app and reload the page. Existing home-screen icons can be cached by the operating system; removing and re-adding that shortcut may be needed to refresh its icon (the app's browser data is separate from the shortcut, but make a backup before changes).
+
+
+## iPhone Home Screen icon — v2.3 fix
+
+This package includes the original LingoLeaf logo in `apple-touch-icon.png` at the website root, in addition to the existing `icons/` folder. Make sure to upload **all files AND folders** to the same GitHub repository path as `index.html`. Do not upload the ZIP as a single file.
+
+After GitHub Pages deployment, open `https://YOUR-SITE-URL/apple-touch-icon.png` (relative to the folder with `index.html`) in Safari. You should see the colorful leaf/chat icon. If you get a 404, a required icon file is missing from the deployed site.
+
+**Important:** iOS does not reliably update an existing Home Screen icon. First export your LingoLeaf backup if you have any learning progress. Then delete the OLD Home Screen shortcut **only**, open the live website in Safari, choose Share -> Add to Home Screen, and add it again. Deleting an installed web app may also delete app-local data; restore the exported backup if needed. If Safari keeps an old website appearance, refresh the page.
+
+App data (profiles/progress) in code has not been changed in this update.
